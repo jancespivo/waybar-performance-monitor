@@ -1,0 +1,18 @@
+[package]
+name = "waybar-performance-monitor"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
+
+[lints.rust]
+unsafe_code = "forbid"
+unreachable_pub = "warn"
+
+[lints.clippy]
+let_underscore_must_use = "forbid"
+todo = "warn"
+unwrap_used = "deny"
